@@ -1,0 +1,237 @@
+.doctors-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    sans-serif;
+}
+
+.doctors-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.doctors-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.view-all-link {
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-color 0.2s ease;
+}
+
+.view-all-link:hover {
+  border-bottom-color: #6366f1;
+}
+
+.doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 20px;
+  justify-items: center;
+  overflow: hidden;
+}
+
+.doctor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  padding: 16px 12px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 180px;
+  min-height: 140px;
+  position: relative;
+  overflow: visible;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 180px;
+  min-height: 140px;
+  position: relative;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+.doctor-card:hover {
+  transform: translateY(-2px);
+}
+
+.doctor-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease;
+  flex-shrink: 0;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: visible;
+}
+
+.doctor-card:hover .doctor-icon {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.doctor-icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.doctor-icon svg {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.doctor-name {
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin: 0;
+  line-height: 1.2;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1200px) {
+  .doctors-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .doctors-container {
+    padding: 15px;
+  }
+
+  .doctors-header h2 {
+    font-size: 20px;
+  }
+
+  .doctors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .doctor-card {
+    max-width: 160px;
+    min-height: 120px;
+    padding: 10px 6px;
+  }
+
+  .doctor-card {
+    max-width: 160px;
+    min-height: 120px;
+    padding: 10px 6px;
+  }
+
+  .doctor-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .doctor-icon img,
+  .doctor-icon svg,
+  .doctor-icon svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .doctor-name {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .doctors-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .doctors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .doctor-card {
+    max-width: 140px;
+    min-height: 110px;
+  }
+
+  .doctor-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 8px;
+  }
+
+  .doctor-icon img,
+  .doctor-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .doctor-name {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+
+  .doctor-card {
+    max-width: 140px;
+    min-height: 110px;
+  }
+
+  .doctor-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 8px;
+  }
+
+  .doctor-icon img,
+  .doctor-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .doctor-name {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+}

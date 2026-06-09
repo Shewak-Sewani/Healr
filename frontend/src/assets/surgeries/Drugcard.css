@@ -1,0 +1,328 @@
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+  background-color: #fff;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+  color: #2563eb;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.ingredient-badge {
+  background-color: #f1f5f9;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.875rem;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.price {
+  color: #171918;
+  font-weight: bold;
+  margin: 0.75rem 0;
+}
+
+.btn {
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-details {
+  background-color: #838486; /* gray */
+  color: #022442;
+  margin-right: 0.5rem;
+}
+
+.btn-details:hover {
+  background-color: #5a6268;
+}
+
+.btn-cart {
+  background-color: #022442;
+  /* light gray */
+  color: #c4c4c5;
+}
+
+.btn-cart:hover {
+  background-color: #838486;
+  color: #022442;
+}
+
+.modern-pagination-btn {
+  background-color: #022442;
+  color: #ffffff;
+  border: none;
+  padding: 0.7rem 0.7rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(0, 123, 255, 0.3);
+  transition: all 0.2s ease-in-out;
+  min-width: 130px; /* ensures both buttons are equal */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.modern-pagination-btn:hover:not(:disabled) {
+  background-color: #0056d2;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 86, 210, 0.4);
+}
+
+.modern-pagination-btn:disabled {
+  background-color: #d6d6d6;
+  color: #888;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+form .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.drug-purpose {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.truncate-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Show only 4 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cart-drawer-overlay {
+  position: fixed;
+  top: 60px; /* Adjust to your navbar height */
+  right: 0;
+  width: 100%;
+  height: calc(100vh - 60px); /* Subtract navbar height */
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cart-drawer {
+  background: white;
+  width: 300px;
+  height: 100%;
+  padding: 20px;
+  box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+  animation: slide-in 0.3s ease forwards;
+  overflow-y: auto;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+/* Spinner from Uiverse.io by satyamchaudharydev */
+.loading {
+  --speed-of-animation: 0.9s;
+  --gap: 6px;
+  --first-color: #4c86f9;
+  --second-color: #49a84c;
+  --third-color: #f6bb02;
+  --fourth-color: #f6bb02;
+  --fifth-color: #2196f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  gap: 6px;
+  height: 100px;
+}
+
+.loading span {
+  width: 4px;
+  height: 50px;
+  background: var(--first-color);
+  animation: scale var(--speed-of-animation) ease-in-out infinite;
+}
+
+.loading span:nth-child(2) {
+  background: var(--second-color);
+  animation-delay: -0.8s;
+}
+
+.loading span:nth-child(3) {
+  background: var(--third-color);
+  animation-delay: -0.7s;
+}
+
+.loading span:nth-child(4) {
+  background: var(--fourth-color);
+  animation-delay: -0.6s;
+}
+
+.loading span:nth-child(5) {
+  background: var(--fifth-color);
+  animation-delay: -0.5s;
+}
+
+@keyframes scale {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.05);
+  }
+  20% {
+    transform: scaleY(1);
+  }
+}
+.search-bar-merged {
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 999px;
+  overflow: hidden;
+  box-shadow: 0 0 0 2px #d0dfef;
+  background-color: #f8f9fa;
+}
+
+.search-input-merged {
+  flex: 1;
+  border: none;
+  padding: 0.75rem 1.2rem;
+  font-size: 1rem;
+  outline: none;
+  background-color: transparent;
+}
+
+.search-btn-merged {
+  background-color: #3e3d3d;
+  color: white;
+  border: none;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background 0.2s ease-in-out;
+}
+.search-bar-merged:hover {
+  box-shadow: 0 0 0 2px #0872dd;
+}
+.search-btn-merged:hover {
+  background-color: #18181a;
+}
+.card {
+  border: 1px solid #dee2e6;
+  border-radius: 0.8rem;
+  padding: 1rem;
+  background-color: #fff;
+  transition: box-shadow 0.2s ease;
+  height: 100%;
+}
+
+.card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgb(107, 106, 106);
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #343a40;
+  margin-bottom: 1rem;
+}
+
+.card button {
+  font-size: 0.85rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 0.4rem;
+}

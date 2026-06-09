@@ -1,0 +1,131 @@
+.conditions-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    sans-serif;
+}
+
+.conditions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.conditions-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.view-all-link {
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-color 0.2s ease;
+}
+
+.view-all-link:hover {
+  border-bottom-color: #6366f1;
+}
+
+.conditions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.condition-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.condition-card:hover {
+  transform: translateY(-2px);
+}
+
+.condition-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+.condition-card:hover .condition-icon {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.condition-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.condition-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin: 0;
+  line-height: 1.3;
+  max-width: 120px;
+}
+
+@media (max-width: 768px) {
+  .conditions-container {
+    padding: 15px;
+  }
+
+  .conditions-header h2 {
+    font-size: 20px;
+  }
+
+  .conditions-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+  }
+
+  .condition-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .condition-icon img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .condition-name {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .conditions-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .conditions-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}

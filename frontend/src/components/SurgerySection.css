@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.hero-section {
+  width: 90vw;
+  background: linear-gradient(to right, #683d2b, #1b0c4e);
+  border-radius: 18px;
+  padding: 1rem;
+  min-height: 30vh;
+  margin-left: 60px;
+
+  /* 🛠️ Critical fix below */
+  margin-top: 30px; /* ensures it is pushed down */
+  position: relative;
+  z-index: 1;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+.hero-image {
+  max-height: 100%; /* Try 450 or 500 */
+  width: 100%; /* Make it responsive */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Optional for better fitting */
+}
+
+.hero-section .highlight {
+  color: #ffa500; /* orange-yellow */
+}
+
+.badge-box {
+  background-color: #8b5e3c;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.badge-text {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Updated search container styles */
+.search-container {
+  display: flex;
+  gap: 0;
+  max-width: 800px; /* Increased width significantly */
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 4px; /* Added padding around the entire container */
+}
+
+.location-section {
+  display: flex;
+  border-right: 1px solid #e0e0e0;
+}
+
+.location-input {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  min-height: 28px;
+  padding: 0 12px;
+  width: 140px;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.detect-button {
+  border: none !important;
+  background: transparent !important;
+  color: #666 !important;
+  font-size: 12px;
+  padding: 0 10px;
+  white-space: nowrap;
+  font-weight: 500;
+  min-height: 28px;
+  border-radius: 4px;
+}
+
+.detect-button:hover {
+  background: rgba(0, 0, 0, 0.05) !important;
+  color: #333 !important;
+}
+
+.main-search-input {
+  flex: 1;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  min-height: 30px;
+  padding: 0 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  margin: 0 2px;
+}
+
+.search-button {
+  border: none !important;
+  min-height: 28px;
+  padding: 0 20px;
+  white-space: nowrap;
+  background-color: #ffa500 !important;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.hero-image {
+  max-height: 350px;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero-image {
+    max-height: 250px;
+  }
+
+  .search-container {
+    max-width: 100%;
+    flex-direction: column;
+  }
+
+  .location-section {
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .location-input {
+    width: 100%;
+  }
+
+  .search-button {
+    padding: 0 1rem;
+  }
+}
+
+.form-control,
+.form-select {
+  background-color: #f1f5f9;
+  border: 1px solid #ced4da;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #ffa500;
+  box-shadow: 0 0 0 0.2rem rgba(255, 165, 0, 0.25);
+  background-color: #ffffffa7;
+}
+
+label.form-label {
+  margin-bottom: 0.5rem;
+}
+
+button[type="submit"] {
+  font-size: 1.1rem;
+  border-radius: 8px;
+  background-color: #1b0c4e;
+  color: #e0e0e0;
+}

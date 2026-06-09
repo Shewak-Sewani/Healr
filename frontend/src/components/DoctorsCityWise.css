@@ -1,0 +1,55 @@
+.doctors-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background-color: #f9fafb;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-left: 18px;
+}
+
+.city-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.city-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1.5rem;
+  margin-left: 16px;
+}
+
+.specialization-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.specialization-item:hover {
+  background-color: #f9fafb;
+}
+
+.chevron {
+  margin-right: 0.5rem;
+  color: #9ca3af;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.link-text {
+  font-size: 0.875rem;
+  color: #6b7280;
+  transition: color 0.2s ease;
+}
+
+.specialization-item:hover .chevron,
+.specialization-item:hover .link-text {
+  color: #e66a12;
+}
