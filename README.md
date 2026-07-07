@@ -114,12 +114,12 @@ The frontend is configured to proxy `/api/*` requests to the backend using `verc
 
 ### Doctor
 
-- **Email:** karan@test.com
-- **Password:** 111111
+- **Email:** Shewak@test.com
+- **Password:** 100000
 
 ### Patient
 
-- **Email:** kashish@test.com
+- **Email:** Samian@test.com
 - **Password:** 11223344
 
 ### Admin
